@@ -9,7 +9,7 @@ var redux_1 = require("redux");
  * @param {A} actions
  * @param {(redux: DescribeReduxContext<S extends {}, A extends ActionCreatorsMapObject>) => void} callback
  */
-function describeWithRedux(description, reducer, initialState, actions, callback) {
+function describeRedux(description, reducer, initialState, actions, callback) {
     var store = redux_1.createStore(reducer, initialState);
     var boundActions = redux_1.bindActionCreators(actions, store.dispatch);
     var context = {
@@ -25,3 +25,5 @@ function describeWithRedux(description, reducer, initialState, actions, callback
         });
     })();
 }
+exports.describeRedux = describeRedux;
+exports.default = describeRedux;
