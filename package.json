@@ -1,6 +1,6 @@
 {
   "name": "describe-redux",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Substitution for describe function made to test redux actions/reducers in a simple fashion",
   "main": "dist/index.js",
   "scripts": {
@@ -25,5 +25,6 @@
   },
   "peerDependencies": {
     "redux": "^3.0.0"
-  }
+  },
+  "types": "src/index.d.ts"
 }
