@@ -2,7 +2,7 @@
   "name": "describe-redux",
   "version": "0.4.0",
   "description": "Substitution for describe function made to test redux actions/reducers in a simple fashion",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,5 +29,5 @@
   "peerDependencies": {
     "redux": "^3.0.0"
   },
-  "types": "src/index.d.ts"
+  "typings": "./src/index.d.ts"
 }
