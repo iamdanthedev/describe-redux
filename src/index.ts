@@ -14,7 +14,7 @@ export type DescribeReduxContext<S extends {}, A extends ActionCreatorsMapObject
  * @param {A} actions
  * @param {(redux: DescribeReduxContext<S extends {}, A extends ActionCreatorsMapObject>) => void} callback
  */
-function describeRedux<S extends {}, A extends ActionCreatorsMapObject>(
+export function describeRedux<S extends {}, A extends ActionCreatorsMapObject>(
   description: string,
   reducer: Reducer<S>,
   initialState: S,
@@ -40,3 +40,5 @@ function describeRedux<S extends {}, A extends ActionCreatorsMapObject>(
   })();
 
 }
+
+export default describeRedux;
