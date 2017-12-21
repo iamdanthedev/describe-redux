@@ -1,0 +1,29 @@
+{
+  "name": "describe-redux",
+  "version": "0.1.0",
+  "description": "Substitution for describe function made to test redux actions/reducers in a simple fashion",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:rasdaniil/describe-redux.git"
+  },
+  "keywords": [
+    "testing",
+    "redux",
+    "describe",
+    "mocha"
+  ],
+  "author": "Daniel Khoroshko",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@types/mocha": "^2.2.44",
+    "@types/redux": "^3.6.0"
+  },
+  "peerDependencies": {
+    "redux": "^3.0.0"
+  }
+}
