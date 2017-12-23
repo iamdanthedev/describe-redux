@@ -1,6 +1,6 @@
 {
   "name": "describe-redux",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Substitution for describe function made to test redux actions/reducers in a simple fashion",
   "main": "./dist/index.js",
   "scripts": {
@@ -20,6 +20,8 @@
   "author": "Daniel Khoroshko",
   "license": "Apache-2.0",
   "dependencies": {
+  },
+  "devDependencies": {
     "@types/chai": "^4.0.10",
     "@types/mocha": "^2.2.44",
     "@types/redux": "^3.6.0",
