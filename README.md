@@ -31,7 +31,7 @@ function describeRedux<S extends {}, A extends ActionCreatorsMapObject>(
 The callback argument  has the following type
 
 ```typescript
-type DescribeReduxContext<Sextends {}, A extends ActionCreatorsMapObject> = {
+type DescribeReduxContext<S extends {}, A extends ActionCreatorsMapObject> = {
   // redux store
   store: Store<S>;
 
