@@ -12,16 +12,16 @@ It has the following signature:
 function describeRedux<S extends {}, A extends ActionCreatorsMapObject>(
   // a test suite description (similar to `describe()`)
   description: string,
-  
+
   // a reducer
   reducer: Reducer<S>,
-  
+
   // an initial state
   initialState: S,
-  
+
   // actions (of type ActionCreatorsMapObject which is an object)
   actions: A,
-  
+
   // callback which received an argument `redux` which allow to access the store
   callback: (redux: DescribeReduxContext<S, A>) => void
 ): void;
@@ -34,10 +34,10 @@ The callback argument  has the following type
 type DescribeReduxContext<Sextends {}, A extends ActionCreatorsMapObject> = {
   // redux store
   store: Store<S>;
-  
+
   // state getter (same as store.getState())
   state: Readonly<S>;
-  
+
   // bound actions
   actions: A;
 };
@@ -57,12 +57,7 @@ import { initialState, reducer } from './store';
 describe('Test store', () => {
 
   // with initial state
-  describeRedux(
-    `action ${actions.addItem.type}`,
-    reducer,
-    initialState,
-    actions,
-    redux => {
+  describeRedux(${actions.addItem.type}, reducer, initialState, actions, redux => {
 
       it('should add item', () => {
         redux.actions.addItem({id: 'test-id'});
