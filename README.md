@@ -6,7 +6,29 @@ and bound actions to the callback.
 
 In the examples the `typescript-fsa` lib is used to create actions, but it should not make any difference.
 
-It has the following signature:
+```typescript
+import { expect } from 'chai';
+import { describeRedux } from 'describe-redux';
+import * as actions from './actions';
+import { initialState, reducer } from './store';
+
+
+describe('Test store', () => {
+
+  // with initial state
+  describeRedux(`${actions.addItem.type}`, reducer, initialState, actions, redux => {
+
+      it('should add item', () => {
+        redux.actions.addItem({id: 'test-id'});
+        expect(redux.state.items).to.eql(['test-id']);
+      });
+
+  });
+
+});
+```
+
+#### API ####
 
 ```typescript
 function describeRedux<S extends {}, A extends ActionCreatorsMapObject>(
@@ -47,24 +69,4 @@ type DescribeReduxContext<S extends {}, A extends ActionCreatorsMapObject> = {
 A full example can be found under the `examples` folder
 
 
-```typescript
-import { expect } from 'chai';
-import { describeRedux } from 'describe-redux';
-import * as actions from './actions';
-import { initialState, reducer } from './store';
 
-
-describe('Test store', () => {
-
-  // with initial state
-  describeRedux(`${actions.addItem.type}`, reducer, initialState, actions, redux => {
-
-      it('should add item', () => {
-        redux.actions.addItem({id: 'test-id'});
-        expect(redux.state.items).to.eql(['test-id']);
-      });
-
-  });
-
-});
-```
