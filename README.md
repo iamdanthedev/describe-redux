@@ -57,7 +57,7 @@ import { initialState, reducer } from './store';
 describe('Test store', () => {
 
   // with initial state
-  describeRedux(${actions.addItem.type}, reducer, initialState, actions, redux => {
+  describeRedux(`${actions.addItem.type}`, reducer, initialState, actions, redux => {
 
       it('should add item', () => {
         redux.actions.addItem({id: 'test-id'});
